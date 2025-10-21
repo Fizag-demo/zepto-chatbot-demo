@@ -1,0 +1,85 @@
+{
+
+  "items": {
+    "vegetables": {
+      "tomato": 25,
+      "onion": 30,
+      "potato": 28,
+      "carrot": 40,
+      "cabbage": 35,
+      "beans": 50
+    },
+    "fruits": {
+      "apple": 120,
+      "banana": 60,
+      "mango": 150,
+      "grapes": 90,
+      "orange": 80,
+      "pomegranate": 140
+    },
+    "leafy": {
+      "spinach": 25,
+      "mint": 15,
+      "coriander": 10,
+      "methi": 20
+    },
+    "flowers": {
+      "rose": 100,
+      "jasmine": 80,
+      "marigold": 60
+    },
+    "dairy": {
+      "milk": 52,
+      "curd": 45,
+      "paneer": 120,
+      "butter": 65,
+      "cheese": 90
+    },
+    "meat": {
+      "chicken": 240,
+      "mutton": 680,
+      "fish": 350,
+      "eggs": 65
+    },
+    "spices": {
+      "turmeric": 60,
+      "chilli powder": 80,
+      "cumin": 120,
+      "garam masala": 130
+    },
+    "masala": {
+      "chole masala": 75,
+      "biryani masala": 90,
+      "sambar powder": 70
+    },
+    "electronics": {
+      "earphones": 499,
+      "charger": 399,
+      "power bank": 999,
+      "extension cord": 299
+    }
+  },
+
+  "festivals": {
+    "diwali": {
+      "date": "2025-10-20",
+      "offer": "✨ Diwali Dhamaka! Up to 50% off on sweets, snacks & home decor!",
+      "wish": "🪔 Happy Diwali! Wishing you light, joy, and prosperity!"
+    },
+    "christmas": {
+      "date": "2025-12-25",
+      "offer": "🎄 Christmas Celebration: 40% off on chocolates, cakes & decor!",
+      "wish": "🎅 Merry Christmas! Enjoy the festive cheer with Zepto offers!"
+    },
+    "new year": {
+      "date": "2026-01-01",
+      "offer": "🎉 New Year Bonanza: Flat 45% off on groceries & drinks!",
+      "wish": "🥳 Happy New Year! Start the year fresh with Zepto deals!"
+    },
+    "pongal": {
+      "date": "2026-01-15",
+      "offer": "🌾 Pongal Celebration: 30% off on rice, jaggery & milk products!",
+      "wish": "🌞 Happy Pongal! Celebrate the harvest with Zepto savings!"
+    }
+  }
+}
