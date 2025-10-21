@@ -3,7 +3,8 @@ import re
 from rapidfuzz import process, fuzz
 from datetime import datetime, date
 import os
-from transformers import pipeline
+from huggingface_hub import InferenceClient
+from dotenv import load_dotenv
 
 # ------------------ FILE PATHS ------------------
 CHAT_FILE = "chat_data.json"
@@ -22,8 +23,14 @@ if not os.path.exists(UNANSWERED_FILE):
     with open(UNANSWERED_FILE, "w", encoding="utf-8") as f:
         json.dump([], f)
 
-# ------------------ AI FALLBACK MODEL ------------------
-ai_model = pipeline("text2text-generation", model="google/flan-t5-base")
+# ------------------ LOAD API KEY AND INITIALIZE LLAMA ------------------
+load_dotenv()
+HUGGINGFACE_API_KEY = os.getenv("HUGGINGFACE_API_KEY")
+
+client = InferenceClient(
+    model="meta-llama/Llama-3.2-1B-Instruct",
+    token=HUGGINGFACE_API_KEY
+)
 
 # ------------------ HELPER FUNCTIONS ------------------
 def clean_text(text):
@@ -57,9 +64,8 @@ def check_faq(user_input):
 
 def check_items(user_input):
     """Search for items and prices in Zepto data."""
-    big_appliances = ["washing machine", "fridge", "television", "tv", "microwave", "ac", "refrigerator"]
+    big_appliances = ["washing machine", "fridge", "television", "tv", "microwave", "ac", "refrigerator", "vaccum cleaner"]
 
-    # Reject big appliances
     for appliance in big_appliances:
         if appliance in user_input:
             return f"Zepto doesn’t sell large appliances like {appliance}. It mainly offers groceries and small gadgets."
@@ -78,25 +84,27 @@ def check_festivals(user_input):
             return f"{details['wish']} 🎉 {details['offer']}"
     return None
 
+# ------------------ AI FALLBACK USING LLAMA ------------------
 def ask_ai_fallback(user_input):
-    """Use HuggingFace Transformers if JSON doesn’t have an answer."""
-    prompt = (
-        "You are a helpful AI chatbot for Zepto customers. "
-        "If the question is about product price, delivery, offers, or Zepto service, "
-        "respond politely with an informative short answer. "
-        "If unsure, say you are not sure but try your best.\n\n"
-        f"User: {user_input}\nChatbot:"
-    )
+    """Use LLaMA (Meta) model via Hugging Face for fallback answers."""
+    try:
+        response = client.chat_completion(
+            model="meta-llama/Llama-3.2-1B-Instruct",
+            messages=[
+                {"role": "system", "content": "You are a helpful AI chatbot for Zepto customers. "
+                                              "Answer politely and concisely about Zepto’s products, prices, offers, and delivery. "
+                                              "If unsure, apologize briefly but try to be helpful."},
+                {"role": "user", "content": user_input}
+            ],
+            max_tokens=150,
+            temperature=0.7
+        )
 
-    response = ai_model(
-        prompt,
-        max_new_tokens=150,
-        num_return_sequences=1,
-        temperature=0.7
-    )
+        return response.choices[0].message["content"].strip()
 
-    return response[0]["generated_text"].strip()
-
+    except Exception as e:
+        print("AI fallback error:", e)
+        return None
 # ------------------ MAIN RESPONSE FUNCTION ------------------
 def chatbot_response(user_input):
     user_input_clean = clean_text(user_input)
@@ -126,9 +134,8 @@ def chatbot_response(user_input):
     return "Sorry, I don’t have an answer for that yet — but I’ll learn soon!"
 
 # ------------------ MAIN LOOP ------------------
-# ------------------ MAIN LOOP ------------------
 if __name__ == "__main__":
-    print("🛒 Zepto Chatbot is ready! Type 'exit' to stop.\n")
+    print("🛒 Zepto Chatbot (LLaMA) is ready! Type 'exit' to stop.\n")
 
     while True:
         user_input = input("You: ").strip()
