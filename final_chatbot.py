@@ -64,15 +64,17 @@ def check_faq(user_input):
 
 def check_items(user_input):
     """Search for items and prices in Zepto data."""
-    big_appliances = ["washing machine", "fridge", "television", "tv", "microwave", "ac", "refrigerator", "vaccum cleaner"]
+    big_appliances = ["washing machine", "fridge", "television", "tv", "microwave", "ac", "refrigerator", "vacuum cleaner"]
 
     for appliance in big_appliances:
         if appliance in user_input:
             return f"Zepto doesn’t sell large appliances like {appliance}. It mainly offers groceries and small gadgets."
 
+    # Enhanced item matching using fuzzy logic
     for category, items in zepto_data["items"].items():
         for item, price in items.items():
-            if item in user_input:
+            # Use both direct match and partial fuzzy match
+            if item in user_input or fuzz.partial_ratio(item, user_input) > 75:
                 return f"{item.title()} is available under {category.title()} for ₹{price}."
     return None
 
@@ -105,9 +107,15 @@ def ask_ai_fallback(user_input):
     except Exception as e:
         print("AI fallback error:", e)
         return None
+
 # ------------------ MAIN RESPONSE FUNCTION ------------------
 def chatbot_response(user_input):
     user_input_clean = clean_text(user_input)
+
+    # 👋 Greeting handler
+    greetings = ["hi", "hello", "hey", "hii", "hola"]
+    if any(word in user_input_clean.split() for word in greetings):
+        return "Hi 👋! Welcome to Zepto — how can I help you today?"
 
     # Check FAQ
     faq_ans = check_faq(user_input_clean)
