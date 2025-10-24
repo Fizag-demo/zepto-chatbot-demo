@@ -70,12 +70,18 @@ def check_items(user_input):
         if appliance in user_input:
             return f"Zepto doesn’t sell large appliances like {appliance}. It mainly offers groceries and small gadgets."
 
-    # Enhanced item matching using fuzzy logic
+    # 🚫 Restricted non-grocery items
+    restricted_keywords = ["shoes", "sandals", "slippers", "footwear"]
+    for restricted in restricted_keywords:
+        if restricted in user_input:
+            return f"Zepto doesn’t sell {restricted}. It mainly offers groceries, snacks, and household essentials."
+
+    # ✅ Regular product match
     for category, items in zepto_data["items"].items():
         for item, price in items.items():
-            # Use both direct match and partial fuzzy match
             if item in user_input or fuzz.partial_ratio(item, user_input) > 75:
                 return f"{item.title()} is available under {category.title()} for ₹{price}."
+
     return None
 
 def check_festivals(user_input):
@@ -85,7 +91,6 @@ def check_festivals(user_input):
         if fest in user_input.lower() or details["date"] == today:
             return f"{details['wish']} 🎉 {details['offer']}"
     return None
-
 # ------------------ AI FALLBACK USING LLAMA ------------------
 def ask_ai_fallback(user_input):
     """Use LLaMA (Meta) model via Hugging Face for fallback answers."""
