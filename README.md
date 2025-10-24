@@ -18,4 +18,4 @@ Python | Streamlit | RapidFuzz | Hugging Face | Pandas | dotenv
 - UI validation and data-driven analysis  
 
 ## 🧾 Documentation  
-[Download Project PDF](link_to_your_GDrive_or_Portfolio)
+[Download Project PDF](https://drive.google.com/file/d/1SCLkHYjClohF64bMTsWfblGbVSrQHVgu/view?usp=sharing)
