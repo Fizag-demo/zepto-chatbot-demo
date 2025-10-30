@@ -1,0 +1,42 @@
+[
+  {
+    "timestamp": "2025-10-30 21:14:16",
+    "user": "hi",
+    "bot": "Hi 👋! Welcome to Zepto — how can I help you today?"
+  },
+  {
+    "timestamp": "2025-10-30 21:14:41",
+    "user": "can i order electronics in zepto",
+    "bot": "No, Zepto offers small electronic items such as chargers, cables, earphones, and power banks. However, it doesn’t sell large appliances like TVs, fridges, or washing machines. You can explore available products under the 'Electronics' category on the Zepto app."
+  },
+  {
+    "timestamp": "2025-10-30 21:15:01",
+    "user": "wht can be the price of 3 kg carrot",
+    "bot": "Yes, 3 kg of Carrot will cost ₹120 (₹40 per unit)."
+  },
+  {
+    "timestamp": "2025-10-30 21:15:14",
+    "user": "can i order books",
+    "bot": "No, No, Zepto doesn’t sell books. It mainly offers groceries, fruits, vegetables, dairy, meat, snacks, beverages, household items, and small electronics like chargers, cables, and earphones."
+  },
+  {
+    "timestamp": "2025-10-30 21:15:48",
+    "user": "can i order stationery in zepto",
+    "bot": "Yes, No, Zepto doesn't sell stationery. They mainly offer groceries, fruits, vegetables, dairy, meat, snacks, beverages, household items, and small electronics."
+  },
+  {
+    "timestamp": "2025-10-30 21:16:05",
+    "user": "indoor games",
+    "bot": "Indoor games are a great way to have fun while staying active indoors. At Zepto, we have a variety of indoor games and activities that are perfect for all ages.\n\nHere are some popular indoor games you can find on Zepto:\n\n1. Board games like Monopoly, Chess, and Scrabble\n2. Card games like Poker, Blackjack, and Solitaire\n3. Video games like Mario Kart, Super Mario Bros., and Overcooked\n4. Puzzles like Jigsaw, Crosswords, and Sudoku\n5. Indoor sports like Table Tennis, Badminton, and Volleyball\n\nIf you're looking for something specific, I can help you find it on Zepto."
+  },
+  {
+    "timestamp": "2025-10-30 21:27:28",
+    "user": "can i order books",
+    "bot": "Yes, Zepto mainly offers groceries, essentials, and small electronics, but they do sell books. You can find a wide selection of books at Zepto, including fiction, non-fiction, and children's books. They have a vast collection of titles across various genres, and you can even find bestsellers and popular authors."
+  },
+  {
+    "timestamp": "2025-10-30 21:27:42",
+    "user": "what about ball",
+    "bot": "Zepto actually sells balls, specifically sports balls, such as basketballs, soccer balls, and tennis balls. They usually have a wide range of sizes and colors available. If you're looking to buy a ball, you can check the Zepto catalog to see what options are available."
+  }
+]
