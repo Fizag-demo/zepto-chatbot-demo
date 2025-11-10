@@ -1,0 +1,72 @@
+[
+  {
+    "timestamp": "2025-11-10 17:12:04",
+    "user": "hi",
+    "bot": "Hi 👋! Welcome to Zepto — how can I help you today?"
+  },
+  {
+    "timestamp": "2025-11-10 17:12:21",
+    "user": "howto cancel the order",
+    "bot": "❌ You can cancel your order directly from the **Zepto app** before it's dispatched.\nGo to **My Orders → Select Order → Cancel Order.**\nIf it’s already out for delivery, please refuse to accept it on arrival."
+  },
+  {
+    "timestamp": "2025-11-10 17:12:31",
+    "user": "how to isnitiate refund",
+    "bot": "Refunds are processed within **7 business days** after the item is verified. COD refunds → Zepto Cash, Prepaid → original bank/card."
+  },
+  {
+    "timestamp": "2025-11-10 17:12:51",
+    "user": "how to apply for refund",
+    "bot": "Refunds are processed within **7 business days** after the item is verified. COD refunds → Zepto Cash, Prepaid → original bank/card."
+  },
+  {
+    "timestamp": "2025-11-10 17:13:05",
+    "user": "what is the steps for refund",
+    "bot": "Refunds are processed within **7 business days** after the item is verified. COD refunds → Zepto Cash, Prepaid → original bank/card."
+  },
+  {
+    "timestamp": "2025-11-10 17:13:23",
+    "user": "what is the return policy",
+    "bot": "🔁 To return or replace an item, open the **Zepto app → My Orders → Help → Return/Replace.**\nAttach a photo of the item if damaged/wrong. Once verified, a refund or replacement will be processed within 3–7 business days."
+  },
+  {
+    "timestamp": "2025-11-10 17:13:44",
+    "user": "what are types of rice available",
+    "bot": "We've got a variety of rice options for you:\n\n✅ Basmati Rice — 5 kg costs ₹250 (₹50/kg)\n✅ Non-Basmati Rice — 2 kg costs ₹80 (₹40/kg)\n✅ Brown Rice — 1 kg costs ₹45\n✅ Ponni Rice — 5 kg costs ₹220 (₹44/kg)\n✅ Sona Masoori Rice — 2 kg costs ₹90 (₹45/kg)\n✅ Jeera Rice — 1 kg costs ₹35\n✅ Idly Rice — 5 kg costs ₹200 (₹40/kg)\n\n**Total = ₹1,015** for the above quantities.\n\nLet me know if you'd like to add any of these to your cart!"
+  },
+  {
+    "timestamp": "2025-11-10 17:14:07",
+    "user": "can i order books and cricket ball",
+    "bot": "We've got you covered for both books and cricket balls.\n\n✅ Yes, books are available under the \"Books\" section, starting from ₹299 for a paperback novel.\n\n✅ Yes, cricket balls are available under the \"Sports\" section, priced at ₹549 for a pack of 6.\n\nIf you'd like to add either of these to your cart, just head to the Zepto app or website, select your location, and search for \"Books\" or \"Cricket Balls\"!"
+  },
+  {
+    "timestamp": "2025-11-10 17:14:32",
+    "user": "can i order house decor items",
+    "bot": "We've got a lovely range of house decor items for you to choose from.\n\n✅ Yes, we sell house decor items, including vases starting from ₹199, wall clocks for ₹299, and beautiful candle holders for ₹199.\n\n✅ Yes, we also have a variety of table lamps, priced between ₹499 to ₹999, and floor lamps starting from ₹699.\n\n✅ Yes, our range of picture frames is available, with prices starting from ₹149 for a set of 2.\n\n✅ Yes, we have a collection of decorative items like decorative boxes, starting from ₹149, and beautiful centerpieces for ₹299.\n\n**Total = ₹2,400** for the above items.\n\nYou can explore our entire range of house decor items by visiting the \"Home Decor\" section on the Zepto app or website."
+  },
+  {
+    "timestamp": "2025-11-10 17:14:50",
+    "user": "is clothes available'",
+    "bot": "❌ Zepto doesn’t sell fashion yet — only groceries and daily essentials."
+  },
+  {
+    "timestamp": "2025-11-10 17:15:07",
+    "user": "whta is the delivery time takes in davnagere and banglore",
+    "bot": "✅ Beans is available under Vegetables for ₹50."
+  },
+  {
+    "timestamp": "2025-11-10 17:15:31",
+    "user": "what is the delivery time takes in davangere",
+    "bot": "**Delivery Time in Davangere:**\n\nWe're excited to serve you in Davangere! Our delivery time is usually within 10-30 minutes, depending on your location and the time of day.\n\n✅ Yes, you can expect your groceries to be delivered to your doorstep within 10-30 minutes, Monday to Sunday, between 8 am and 12 am.\n\n✅ Yes, our delivery time is flexible, and you can track your order in real-time through the Zepto app.\n\n✅ Yes, we offer same-day delivery, so you can get your essentials delivered to you quickly and conveniently.\n\n**Delivery Fee:**\n\n✅ Yes, the delivery fee for Davangere starts at ₹19.\n\n**Order Cut-off Time:**\n\n✅ Yes, the order cut-off time for Davangere is 11:45 pm for next-day delivery.\n\nIf you have any further questions or concerns, please feel free to ask!"
+  },
+  {
+    "timestamp": "2025-11-10 17:16:35",
+    "user": "whta is the total bill of coriendor, mint leaves, beans 500gm, amul butter, curd",
+    "bot": "✅ Mint is available under Leafy for ₹15.\n✅ Beans — 500.0 g costs ₹25000 (₹50/unit).\n✅ Butter is available under Dairy for ₹65.\n✅ Curd is available under Dairy for ₹45."
+  },
+  {
+    "timestamp": "2025-11-10 17:17:07",
+    "user": "what is the total price",
+    "bot": "**Total Price:**\n\n✅ Yes, the total cost of your order is ₹265.\n\n✅ Mint is available under Leafy for ₹15.\n✅ Beans — 500.0 g costs ₹25 (₹50/kg).\n✅ Amul Butter is available under Dairy for ₹65.\n✅ Curd is available under Dairy for ₹45.\n\n**Total = ₹265**"
+  }
+]
